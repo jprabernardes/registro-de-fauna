@@ -1,0 +1,16 @@
+{
+  "titulo": "Registro de Fauna",
+  "grupos": [
+    {"id": "insetos", "nome": "Insetos", "icone": "🐞"},
+    {"id": "aracnideos", "nome": "Aracnídeos", "icone": "🕷️"},
+    {"id": "outros-invertebrados", "nome": "Outros invertebrados", "icone": "🐌"},
+    {"id": "peixes", "nome": "Peixes", "icone": "🐟"},
+    {"id": "anfibios", "nome": "Anfíbios", "icone": "🐸"},
+    {"id": "repteis", "nome": "Répteis", "icone": "🦎"},
+    {"id": "aves", "nome": "Aves", "icone": "🐦"},
+    {"id": "mamiferos", "nome": "Mamíferos", "icone": "🦊"}
+  ],
+  "especies": [
+    {"id": "peixes/surubim-hibrido", "grupo": "peixes", "nome_popular": "Surubim híbrido (provável pintado-da-amazônia)", "nome_cientifico": "Pseudoplatystoma sp. × Leiarius marmoratus", "miniatura": "dados/peixes/surubim-hibrido/foto.jpg", "confianca": "provável"}
+  ]
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Registro de Fauna</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="voltar" href="index.html">← Voltar ao sumário</a>
+  <article class="ficha" id="ficha"><p>Carregando…</p></article>
+  <footer>Registro de Fauna · Manual de Sobrevivência</footer>
+</div>
+<script>
+const id=new URLSearchParams(location.search).get('id')||'';
+if(!/^[a-z-]+\/[a-z0-9-]+$/.test(id)){document.getElementById('ficha').innerHTML='<p>Espécie não encontrada.</p>';}
+else{
+const base='dados/'+id+'/';
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const lista=a=>'<ul>'+(a||[]).map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>';
+fetch(base+'ficha.json').then(r=>{if(!r.ok)throw 0;return r.json()}).then(f=>{
+  document.title=f.nome_popular+' · Registro de Fauna';
+  const midias=[...new Set((f.registros||[]).flatMap(r=>r.midia||[]))];
+  const fotos=midias.filter(m=>/\.(jpe?g|png|webp)$/i.test(m));
+  const sons=midias.filter(m=>/\.(mp3|m4a|ogg|wav)$/i.test(m));
+  const prov=f.confianca!=='confirmada';
+  let h=`<span class="selo ${prov?'provavel':''}">${prov?'Identificação provável':'Identificação confirmada'}</span>
+  <h1>${esc(f.nome_popular)}</h1>
+  <p class="cient">${esc(f.nome_cientifico)} · ${esc(f.familia)}</p>`;
+  fotos.forEach(p=>h+=`<img class="foto" src="${base+esc(p)}" alt="${esc(f.nome_popular)}">`);
+  if(sons.length){h+='<div class="bloco"><h3>Canto gravado</h3>'+sons.map(s=>`<audio controls preload="none" src="${base+esc(s)}"></audio>`).join('')+'</div>';}
+  if(f.outros_nomes?.length)h+=`<p class="meta">Também chamado de: ${esc(f.outros_nomes.join(', '))}</p>`;
+  if(f.nota_identificacao)h+=`<div class="bloco alerta"><h3>Sobre a identificação</h3><p>${esc(f.nota_identificacao)}</p></div>`;
+  h+=`<div class="bloco"><h3>Como reconhecer</h3>${lista(f.como_reconhecer)}</div>`;
+  const hb=f.habitos||{};
+  h+=`<div class="bloco"><h3>Hábitos</h3><ul><li><b>Período:</b> ${esc(hb.periodo)}</li><li><b>Vida social:</b> ${esc(hb.social)}</li><li><b>Onde vive:</b> ${esc(hb.onde_vive)}</li></ul></div>`;
+  h+=`<div class="bloco"><h3>Alimentação</h3><p>${esc(f.alimentacao)}</p></div>`;
+  h+=`<div class="bloco"><h3>Curiosidades</h3>${lista(f.curiosidades)}</div>`;
+  const sv=f.sobrevivencia||{};
+  h+=`<div class="bloco alerta"><h3>Para a sobrevivência</h3><ul><li><b>Perigo:</b> ${esc(sv.perigo)}</li><li><b>Comestível?</b> ${esc(sv.comestivel)}</li><li><b>Dica:</b> ${esc(sv.dica)}</li></ul></div>`;
+  const cv=f.conservacao||{};
+  h+=`<div class="bloco"><h3>Conservação</h3><ul><li><b>IUCN:</b> ${esc(cv.iucn)}</li><li><b>Lei:</b> ${esc(cv.protecao_legal)}</li></ul></div>`;
+  h+=`<div class="bloco"><h3>Nossos registros</h3><ul>`+(f.registros||[]).map(r=>`<li>${esc(r.data)} · ${esc(r.regiao)}${r.ambiente?' · '+esc(r.ambiente):''} · por ${esc(r.por)}</li>`).join('')+`</ul></div>`;
+  h+=`<div class="bloco fontes"><h3>Fontes</h3><ul>`+(f.fontes||[]).map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.titulo)}</a></li>`).join('')+`</ul></div>`;
+  document.getElementById('ficha').innerHTML=h;
+}).catch(()=>{document.getElementById('ficha').innerHTML='<p>Espécie não encontrada.</p>';});
+}
+</script>
+</body>
+</html>

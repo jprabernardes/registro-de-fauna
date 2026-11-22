@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Registro de Fauna</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="capa">
+    <h1>Registro de Fauna</h1>
+    <p>Os animais que encontramos pelo caminho, um por um.</p>
+    <div class="stats" id="stats"></div>
+  </header>
+  <main id="sumario"></main>
+  <footer>Parte do Manual de Sobrevivência · locais generalizados por privacidade</footer>
+</div>
+<script>
+fetch('dados/catalogo.json').then(r=>r.json()).then(cat=>{
+  const el=document.getElementById('sumario');
+  const total=cat.especies.length;
+  document.getElementById('stats').textContent=total+(total===1?' espécie registrada':' espécies registradas');
+  for(const g of cat.grupos){
+    const lista=cat.especies.filter(e=>e.grupo===g.id);
+    const s=document.createElement('section');s.className='grupo';
+    s.innerHTML=`<h2>${g.icone} ${g.nome}<small>${lista.length}</small></h2>`;
+    if(!lista.length){s.innerHTML+='<p class="vazio">Nenhum registro ainda.</p>';}
+    else{
+      const grade=document.createElement('div');grade.className='grade';
+      for(const e of lista){
+        const a=document.createElement('a');a.className='cartao';a.href='especie.html?id='+encodeURIComponent(e.id);
+        a.innerHTML=`<img src="${e.miniatura}" alt="" loading="lazy"><div><b></b><i></i></div>`;
+        a.querySelector('b').textContent=e.nome_popular;a.querySelector('i').textContent=e.nome_cientifico;
+        grade.appendChild(a);
+      }
+      s.appendChild(grade);
+    }
+    el.appendChild(s);
+  }
+});
+</script>
+</body>
+</html>

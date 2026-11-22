@@ -1,0 +1,44 @@
+{
+  "nome_popular": "Surubim híbrido (provável pintado-da-amazônia)",
+  "outros_nomes": ["Cachandiá", "Jundiara", "Pintado-da-amazônia", "Pintado-real"],
+  "nome_cientifico": "Pseudoplatystoma sp. × Leiarius marmoratus (híbrido de criação)",
+  "grupo": "peixes",
+  "familia": "Pimelodidae (bagres de barbilhão longo)",
+  "confianca": "provável",
+  "nota_identificacao": "Bagre pintado de cabeça curta e arredondada, com pintas também nas nadadeiras, pescado em tanque de pesque-pague. Esse conjunto combina com os surubins híbridos muito criados no Centro-Oeste. Para confirmar: a nadadeira das costas (dorsal) era alta, tipo vela? Se sim, reforça o híbrido. O pesqueiro informou o nome do peixe?",
+  "registros": [
+    {"data": "2026-11", "regiao": "Cerrado — Centro-Oeste", "ambiente": "Tanque de pesque-pague", "por": "O2", "midia": ["foto.jpg"]}
+  ],
+  "como_reconhecer": [
+    "Corpo alongado, cinza-claro, coberto de pintas escuras redondas, inclusive nas nadadeiras",
+    "Seis barbilhões ('bigodes') longos, os de cima chegando perto do meio do corpo",
+    "Cabeça mais curta e arredondada que a do pintado puro, que tem cabeça longa e achatada como uma pá"
+  ],
+  "habitos": {
+    "periodo": "Noturno: caça principalmente à noite e no fim da tarde",
+    "social": "Vive no fundo, geralmente solitário",
+    "onde_vive": "Não existe na natureza: é produzido em pisciculturas, cruzando a cachara ou o pintado (bacias do Paraguai, Paraná e Amazonas) com o jundiá-da-amazônia"
+  },
+  "alimentacao": "Carnívoro: come peixes menores e outros animais pequenos. Na piscicultura, aceita ração, o que facilita a criação.",
+  "curiosidades": [
+    "Ele herda as pintas e o crescimento rápido do surubim e a docilidade com ração do jundiá. Por isso virou estrela das pisciculturas e pesque-pagues.",
+    "Os barbilhões funcionam como 'antenas' de tato e paladar: é assim que ele acha comida no escuro e na água barrenta.",
+    "Por ser híbrido, não deve ser solto em rios: se escapar, pode cruzar com os surubins nativos e misturar as populações selvagens."
+  ],
+  "sobrevivencia": {
+    "perigo": "Não é venenoso, mas as nadadeiras do peito e das costas têm um espinho rígido (ferrão) que pode furar ou cortar a mão. Os barbilhões são inofensivos.",
+    "comestivel": "Sim. A carne é branca, firme e tem poucas espinhas. Cozinhe bem (frito, assado ou em moqueca), como qualquer peixe de água doce.",
+    "dica": "Segure por trás das nadadeiras do peito, firmando a cabeça, e use pano ou alicate para tirar o anzol. Se o ferrão furar: lave bem com água e sabão e fique de olho em sinais de infecção (vermelhidão, inchaço, pus). Se aparecerem, procure atendimento."
+  },
+  "conservacao": {
+    "iucn": "Não avaliado: híbridos de criação não entram na Lista Vermelha.",
+    "protecao_legal": "Peixe de criação. Pescar em pesque-pague segue as regras do próprio local. Nunca solte híbridos em rios ou lagos naturais."
+  },
+  "fontes": [
+    {"titulo": "Embrapa — Desenvolvimento embrionário do híbrido pintado-da-amazônia", "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/905808/1/cp.pdf"},
+    {"titulo": "Prado et al. 2021 — Citogenética de Leiarius marmoratus e do híbrido cachandiá (Caryologia)", "url": "https://riviste.fupress.net/index.php/caryologia/article/view/1149"},
+    {"titulo": "Cavenaghi-Altemio et al. 2023 — Filés dos surubins híbridos amazônico e real (Vitae)", "url": "https://revistas.udea.edu.co/index.php/vitae/article/download/349015/20810843/273080"},
+    {"titulo": "Neotropical Ichthyology — Predação noturna de juvenis de pintado", "url": "https://scielo.br/j/ni/a/v4FsYkYw9qSZz9SLNmHMqHt/?lang=en"},
+    {"titulo": "Embrapa — Surubins: pintado, cachara e híbridos", "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1039656/1/CNPASA2015dc21.pdf"}
+  ]
+}
