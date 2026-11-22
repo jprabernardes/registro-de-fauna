@@ -30,8 +30,8 @@ fetch('dados/catalogo.json').then(r=>r.json()).then(cat=>{
       const grade=document.createElement('div');grade.className='grade';
       for(const e of lista){
         const a=document.createElement('a');a.className='cartao';a.href='especie.html?id='+encodeURIComponent(e.id);
-        a.innerHTML=`<img src="${e.miniatura}" alt="" loading="lazy"><div><b></b><i></i></div>`;
-        a.querySelector('b').textContent=e.nome_popular;a.querySelector('i').textContent=e.nome_cientifico;
+        a.innerHTML=`<img src="${e.miniatura}" alt="" loading="lazy"><div><b></b><i></i><small class="local"></small></div>`;
+        a.querySelector('b').textContent=e.nome_popular;a.querySelector('i').textContent=e.nome_cientifico;a.querySelector('.local').textContent=(e.locais||[]).length?'📍 '+e.locais.join(', '):'';
         grade.appendChild(a);
       }
       s.appendChild(grade);

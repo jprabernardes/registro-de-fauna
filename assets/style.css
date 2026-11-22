@@ -34,3 +34,4 @@ audio{width:100%;margin-top:6px}
 .fontes{font-size:.85rem}
 footer{margin-top:40px;text-align:center;font:.8rem system-ui,sans-serif;color:var(--muted)}
 @media print{body{background:#fff}.voltar,audio{display:none}.bloco,.cartao{break-inside:avoid}}
+.cartao .local{display:block;font:.78rem system-ui,sans-serif;color:var(--accent);margin-top:3px}
