@@ -1,13 +1,25 @@
 {
-  "nome_popular": "Pacu (ou híbrido tambacu)",
-  "outros_nomes": ["Pacu-caranha", "Caranha", "Pacu-guaçu"],
+  "nome_popular": "Pacu",
+  "outros_nomes": [
+    "Pacu-caranha",
+    "Caranha",
+    "Pacu-guaçu"
+  ],
   "nome_cientifico": "Piaractus mesopotamicus",
   "grupo": "peixes",
   "familia": "Serrasalmidae (a mesma família das piranhas)",
-  "confianca": "provável",
-  "nota_identificacao": "Corpo alto e achatado, prateado, com peito e nadadeira de baixo alaranjados: é o visual típico do pacu. Em pesque-pague, porém, é muito comum o tambacu (cruzamento de tambaqui com pacu), que só pela foto pode ser difícil de separar. Para ajudar: o peixe tinha a barriga ou as nadadeiras com partes pretas? Isso puxa para o tambacu. O pesqueiro disse o nome?",
+  "confianca": "confirmada",
+  "nota_identificacao": "Identificado pela aparência (corpo alto e achatado, peito e nadadeira de baixo alaranjados) e confirmado pelo pesqueiro. Atenção: em pesque-pagues também é comum o tambacu (tambaqui × pacu), muito parecido; o tambacu costuma ter partes pretas na barriga e nas nadadeiras.",
   "registros": [
-    {"data": "2026-11", "regiao": "Centro-Oeste · Cerrado", "ambiente": "Tanque de pesque-pague", "por": "O1", "midia": ["foto.jpg"]}
+    {
+      "data": "2026-11",
+      "regiao": "Goiânia — GO · Cerrado",
+      "ambiente": "Tanque de pesque-pague",
+      "por": "O1",
+      "midia": [
+        "foto.jpg"
+      ]
+    }
   ],
   "como_reconhecer": [
     "Corpo alto, redondo visto de lado e achatado: os pescadores chamam de 'peixe redondo'",
@@ -35,10 +47,25 @@
     "protecao_legal": "Em rios, siga as regras de tamanho mínimo e a proibição de pesca na piracema do seu estado, e tenha licença de pesca. Em pesque-pague, valem as regras do local."
   },
   "fontes": [
-    {"titulo": "FishBase — Piaractus mesopotamicus", "url": "https://www.fishbase.se/summary/Piaractus-mesopotamicus"},
-    {"titulo": "Acuario de Santa Fe — Ficha do pacu", "url": "https://www.santafe.gob.ar/acuario/download/a2-lecho-1-pacu-6474d470c60d4.pdf"},
-    {"titulo": "The Fish Site — Pacu na aquicultura", "url": "https://thefishsite.com/articles/why-pacu-could-become-a-major-freshwater-aquaculture-contender"},
-    {"titulo": "Wikipedia — Tambaqui e seus híbridos com Piaractus", "url": "https://en.wikipedia.org/wiki/Tambaqui"},
-    {"titulo": "IF Goiano — Nutrição de peixes redondos (Piaractus sp.)", "url": "https://repositorio.ifgoiano.edu.br/bitstream/prefix/3241/1/tcc_Marcelo%20Silva.pdf"}
+    {
+      "titulo": "FishBase — Piaractus mesopotamicus",
+      "url": "https://www.fishbase.se/summary/Piaractus-mesopotamicus"
+    },
+    {
+      "titulo": "Acuario de Santa Fe — Ficha do pacu",
+      "url": "https://www.santafe.gob.ar/acuario/download/a2-lecho-1-pacu-6474d470c60d4.pdf"
+    },
+    {
+      "titulo": "The Fish Site — Pacu na aquicultura",
+      "url": "https://thefishsite.com/articles/why-pacu-could-become-a-major-freshwater-aquaculture-contender"
+    },
+    {
+      "titulo": "Wikipedia — Tambaqui e seus híbridos com Piaractus",
+      "url": "https://en.wikipedia.org/wiki/Tambaqui"
+    },
+    {
+      "titulo": "IF Goiano — Nutrição de peixes redondos (Piaractus sp.)",
+      "url": "https://repositorio.ifgoiano.edu.br/bitstream/prefix/3241/1/tcc_Marcelo%20Silva.pdf"
+    }
   ]
 }

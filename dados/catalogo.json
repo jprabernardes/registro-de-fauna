@@ -57,11 +57,13 @@
     {
       "id": "peixes/pacu",
       "grupo": "peixes",
-      "nome_popular": "Pacu (ou híbrido tambacu)",
+      "nome_popular": "Pacu",
       "nome_cientifico": "Piaractus mesopotamicus",
       "miniatura": "dados/peixes/pacu/foto.jpg",
-      "confianca": "provável",
-      "locais": []
+      "confianca": "confirmada",
+      "locais": [
+        "Goiânia — GO"
+      ]
     }
   ]
 }
